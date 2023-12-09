@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallBounce : MonoBehaviour
 {
     public BallMouvement ballMouvement;
+    public ScoreManager scoreManager;
     private void Bounce(Collision2D collision)
     {
         Vector3 ballPosition = transform.position;
@@ -24,5 +25,9 @@ public class BallBounce : MonoBehaviour
     {
         if (collision.gameObject.name =="Player 1" || collision.gameObject.name == "Player 2")
         { Bounce (collision); }
+        else if (collision.gameObject.name=="Right Border")
+        { scoreManager.Player1Goal(); }
+        else if (collision.gameObject.name == "Left Border")
+        { scoreManager.Player2Goal(); }
     }
 }
