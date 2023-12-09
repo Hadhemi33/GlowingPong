@@ -1095,6 +1095,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballMouvement: {fileID: 1127821407}
   scoreManager: {fileID: 1758913478}
+  hitSFX: {fileID: 9054573493723411129, guid: 893a23a5d3c586c4fa62a96de9336022, type: 3}
 --- !u!1 &1524910760
 GameObject:
   m_ObjectHideFlags: 0

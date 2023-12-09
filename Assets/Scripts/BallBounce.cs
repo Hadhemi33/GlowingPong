@@ -6,6 +6,7 @@ public class BallBounce : MonoBehaviour
 {
     public BallMouvement ballMouvement;
     public ScoreManager scoreManager;
+    public GameObject hitSFX;
     private void Bounce(Collision2D collision)
     {
         Vector3 ballPosition = transform.position;
@@ -35,5 +36,6 @@ public class BallBounce : MonoBehaviour
             ballMouvement.player1Start = true;
             StartCoroutine(ballMouvement.Launch());
         }
+        Instantiate(hitSFX, transform.position, transform.rotation);
     }
 }
